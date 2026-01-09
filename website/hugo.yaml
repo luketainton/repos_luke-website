@@ -115,7 +115,7 @@ params:
   navbar:
     align: ms-auto # Left: ms-auto | center: mx-auto | right: me-auto | Default: ms-auto
     # brandLogo: "/logo.png" # Logo for the brand | default is the favicon variable
-    # showBrandLogo: false # Show brand logo in nav bar | default is true
+    showBrandLogo: false # Show brand logo in nav bar | default is true
     brandName: "Luke Tainton" # Brand name for the brand | default is the title variable
     disableSearch: true
     # searchPlaceholder: "Search"
@@ -134,9 +134,9 @@ params:
   # Hero
   hero:
     enable: true
-    intro: "Hi, my name is"
+    intro: "Hi! My name is"
     title: "Luke."
-    # subtitle: "I scale corporate networks."
+    subtitle: "Network Engineer."
     content: "An enthusiastic network and network automation engineer. I enjoy solving complex problems and building efficient solutions to scale networks for the future."
     image: /images/profilepicture.png
     bottomImage:
@@ -154,10 +154,14 @@ params:
           url: https://git.tainton.uk
         - icon: fab fa-github
           url: https://github.com/luketainton
-        - icon: fab fa-x-twitter
-          url: https://x.com/@luketainton1
+        - icon: fab fa-gitlab
+          url: https://gitlab.com/luketainton
+        # - icon: fab fa-x-twitter
+        #   url: https://x.com/@luketainton1
         - icon: fab fa-linkedin-in
           url: https://www.linkedin.com/in/luketainton
+        - icon: fab fa-blackberry
+          url: /blogs/bbm
       # customIcons:
       #   - icon: /fav.png
       #     url: "https://example.com"
