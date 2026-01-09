@@ -1,0 +1,462 @@
+baseURL: "https://luke.tainton.uk/"
+languageCode: "en-gb"
+title: "Luke Tainton"
+theme: hugo-profile
+
+outputs:
+  home:
+    - "HTML"
+    - "RSS"
+    - "JSON"
+  page:
+    - "HTML"
+    - "RSS"
+
+enableRobotsTXT: true
+
+#services:
+  #googleAnalytics:
+    #id: G-MEASUREMENT_ID
+  #disqus:
+    #shortname: your-disqus-shortname
+
+pagination:
+  pagerSize: 3
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+Menus:
+  # main: []
+  main:
+    - identifier: blog
+      name: Blog
+      title: Blog posts
+      url: /blogs
+      weight: 1
+    # - identifier: gallery
+    #   name: Gallery
+    #   title: Blog posts
+    #   url: /gallery
+    #   weight: 2
+    # Dropdown menu
+    # - identifier: dropdown
+    #   title: Example dropdown menu
+    #   name: Dropdown
+    #   weight: 3
+    # - identifier: dropdown1
+    #   title: example dropdown 1
+    #   name: example 1
+    #   url: /#
+    #   parent: dropdown
+    #   weight: 1
+    # - identifier: dropdown2
+    #   title: example dropdown 2
+    #   name: example 2
+    #   url: /#
+    #   parent: dropdown
+    #   weight: 2
+
+params:
+  title: "Luke Tainton"
+  description: "Network and network automation engineer."
+  # staticPath: ""  # The path to serve the static files from
+  favicon: "/images/profilepicture.png"
+
+  # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
+  # serving both, only the css, or only the js files through the CDN. Any other value will make so that CDN is not used.
+  # Note the lack of "" in true, it should be of boolean type.
+  useBootstrapCDN: false
+
+  # If you want to load dynamically responsive images from Cloudinary
+  # This requires your images to be uploaded + hosted on Cloudinary
+  # Uncomment and change YOUR_CLOUD_NAME to the Cloud Name in your Cloudinary console
+  # cloudinary_cloud_name: "YOUR_CLOUD_NAME"
+
+  # Whether to add mathjax support on all pages. Alternatively, you can opt-in per page by adding `mathjax: true` in the frontmatter.
+  mathjax: false
+
+  # Whether the fade animations on the home page will be enabled
+  animate: true
+
+  theme:
+    # disableThemeToggle: true
+    defaultTheme: "system" # options: light, dark, system | default: system
+
+  font:
+    fontSize: 1rem # default: 1rem
+    fontWeight: 400 # default: 400
+    lineHeight: 1.5 # default: 1.5
+    textAlign: left # default: left
+
+  # color preference
+  # When using hex codes for colors, quotations must be used along with the # sign
+  # color:
+  #   textColor: "#343a40"
+  #   secondaryTextColor: "#6c757d"
+  #   textLinkColor: "#007bff"
+  #   backgroundColor: "#eaedf0"
+  #   secondaryBackgroundColor: "#64ffda1a"
+  #   primaryColor: "#007bff"
+  #   secondaryColor: "#f8f9fa"
+
+  #   darkmode:
+  #     textColor: "#e4e6eb"
+  #     secondaryTextColor: "#b0b3b8"
+  #     textLinkColor: "#ffffff"
+  #     backgroundColor: "#18191a"
+  #     secondaryBackgroundColor: "#212529"
+  #     primaryColor: "#ffffff"
+  #     secondaryColor: "#212529"
+
+  # If you want to customize the menu, you can change it here
+  navbar:
+    align: ms-auto # Left: ms-auto | center: mx-auto | right: me-auto | Default: ms-auto
+    # brandLogo: "/logo.png" # Logo for the brand | default is the favicon variable
+    # showBrandLogo: false # Show brand logo in nav bar | default is true
+    brandName: "Luke Tainton" # Brand name for the brand | default is the title variable
+    disableSearch: true
+    # searchPlaceholder: "Search"
+    stickyNavBar:
+      enable: true
+      showOnScrollUp: true
+    enableSeparator: true
+    menus:
+      disableAbout: false
+      disableExperience: false
+      disableEducation: false
+      disableProjects: true
+      disableAchievements: false
+      disableContact: false
+
+  # Hero
+  hero:
+    enable: true
+    intro: "Hi, my name is"
+    title: "Luke."
+    # subtitle: "I scale corporate networks."
+    content: "An enthusiastic network and network automation engineer. I enjoy solving complex problems and building efficient solutions to scale networks for the future."
+    image: /images/profilepicture.png
+    bottomImage:
+      enable: false
+    # roundImage: true # Make hero image circular | default false
+    button:
+      enable: true
+      name: "See More"
+      url: "#about"
+      download: false
+      newPage: false
+    socialLinks:
+      fontAwesomeIcons:
+        - icon: fab fa-git-alt
+          url: https://git.tainton.uk
+        - icon: fab fa-github
+          url: https://github.com/luketainton
+        - icon: fab fa-x-twitter
+          url: https://x.com/@luketainton1
+        - icon: fab fa-linkedin-in
+          url: https://www.linkedin.com/in/luketainton
+      # customIcons:
+      #   - icon: /fav.png
+      #     url: "https://example.com"
+
+  # About
+  about:
+    enable: true
+    title: "About Me"
+    image: "/images/profilepicture.png"
+    content: |-
+      I am a network engineer with a passion for network/process automation, with a degree in computer networks and experience in Python and low/no-code automation platforms. I am currently working as a site reliability engineer at [Cisco Systems](https://cisco.com) in the UK.
+
+      Outside of work I enjoy learning about new technologies and programming languages. I run a "home lab" where I experiment with different technologies and build projects.
+    skills:
+      enable: true
+      title: "Here are a few technologies I've been working with recently:"
+      items:
+        - "Cisco Catalyst"
+        - "Cisco Meraki"
+        - "Linux"
+        - "Docker"
+        - "Python"
+        - "OpenShift"
+        - "Git"
+
+  # Experience
+  experience:
+    enable: true
+    # title: "Custom Name"
+    items:
+      - company: "Cisco"
+        companyUrl: "https://cisco.com"
+        jobs:
+          - name: "Site Reliability Engineer"
+            date: "Sep 2020 - present"
+            content: |-
+              Working as a senior site reliability engineer in Cisco IT's Network Engineering and Operations team, specifically focusing on Wired/Wireless access and hardware-based home VPN solutions.
+
+              Responsibilities include:
+              - Managing and automating network infrastructure using Cisco's [Catalyst Center](https://www.cisco.com/site/uk/en/products/networking/catalyst-center/index.html) and [Meraki](https://www.cisco.com/site/us/en/about/corporate-strategy-office/acquisitions/meraki/index.html) products.
+              - Monitoring network performance and troubleshooting issues.
+              - Collaborating with cross-functional teams to implement network solutions.
+
+              I have experience with the following tools:
+              - ServiceNow
+              - Jira (Jira Software and Jira Align)
+              - GitHub
+              - Jenkins
+              - CloudBees CD/RO
+              - RedHat OpenShift
+            # info:
+            #   content: Working as a senior site reliability engineer in Cisco IT Networking.
+            featuredItems:
+              fontAwesomeIcons:
+                # - icon: fa-solid fa-globe
+                #   url: "https://cisco.com"
+                #   tooltip: Visit Website
+                - icon: fa-solid fa-blog
+                  url: "https://blogs.cisco.com/author/ltainton"
+                  tooltip: Find me on Cisco Blogs
+                # - icon: fa-brands fa-linkedin-in
+                #   url: https://www.linkedin.com/in/luketainton
+                #   tooltip: See this on LinkedIn
+              customIcons: []
+                # - icon: /images/brands/csco.png
+                #   url: "https://cisco.com"
+                #   tooltip: Cisco Logo
+
+          - name: "Network Engineer Intern"
+            date: "Jul 2018 - Sep 2019"
+            content: |-
+              Placement year as part of my degree, supporting Customer Experience testing labs. I worked in the Customer Experience Labs section as one of ~10 lab admins responsible for maintaining the labs in the UK.
+              
+              I developed my programming and network management skills, creating various automation tools for use within project testbeds or lab infrastructure.
+
+              Responsibilities included:
+              - Rack/Stack equipment
+              - Build out and tear down project testbeds
+              - Troubleshoot connectivity issues in testbeds and lab infrastructure
+
+              I also maintained much of the lab's infrastructure, gaining experience with the following products and tools:
+              - Cisco Identity Services Engine
+              - Cisco ACI (minor)
+              - Cisco UCS Manager (minor)
+              - DHCP & DNS
+              - VMware vCenter Appliance and ESXi hosts
+            # info:
+            #   content: Working as a senior site reliability engineer in Cisco IT Networking.
+            # featuredItems:
+            #   fontAwesomeIcons:
+            #     - icon: fa-solid fa-globe
+            #       url: "https://cisco.com"
+            #       tooltip: Visit Website
+            #     - icon: fa-solid fa-blog
+            #       url: "https://blogs.cisco.com/author/ltainton"
+            #       tooltip: Find me on Cisco Blogs
+            #     - icon: fa-brands fa-linkedin-in
+            #       url: https://www.linkedin.com/in/luketainton
+            #       tooltip: See this on LinkedIn
+            #   customIcons: []
+                # - icon: /images/brands/csco.png
+                #   url: "https://cisco.com"
+                #   tooltip: Cisco Logo
+      - company: "Birmingham City University"
+        companyUrl: "https://bcu.ac.uk"
+        jobs:
+          - name: "Student Demonstrator"
+            date: "Sep 2019 - Jul 2020"
+            content: |-
+              Assisted lecturers during lab sessions for the Information Networks and Enterprise Network Systems modules. This involved answering questions from students and performing demonstrations before allowing students to attempt the lab on their own.
+            # info:
+            #   content:
+            # featuredItems:
+            #   fontAwesomeIcons:
+            #     - icon: fa-solid fa-globe
+            #       url: "https://bcu.ac.uk"
+            #       tooltip: Visit Website
+            #     - icon: fa-brands fa-linkedin-in
+            #       url: https://www.linkedin.com/in/luketainton
+            #       tooltip: See this on LinkedIn
+            #   customIcons: []
+
+          - name: "Student Mentor for First Year Innovation Project"
+            date: "Sep 2017 - Jun 2018"
+            content: |-
+              Acted as a project mentor for two teams of First Year students, guiding them through their Innovation Project as part of their course. These teams both utilised the LoRa LPWAN protocol, which allowed me to continue my learning about the technology alongside them, while also providing assistance to them, based on my experience from my Innovation Project from my first year.
+            # info:
+            #   content:
+            # featuredItems:
+            #   fontAwesomeIcons:
+            #     - icon: fa-solid fa-globe
+            #       url: "https://bcu.ac.uk"
+            #       tooltip: Visit Website
+            #     - icon: fa-brands fa-linkedin-in
+            #       url: https://www.linkedin.com/in/luketainton
+            #       tooltip: See this on LinkedIn
+            #   customIcons: []
+      - company: "Safran Seats GB"
+        companyUrl: "https://www.safran-group.com/companies/safran-seats"
+        jobs:
+          - name: "IT Support Engineer"
+            date: "Jun 2015 - Sep 2016"
+            content: |-
+              *This company was known as Zodiac Seats UK (part of Zodiac Aerospace) during my time there prior to rebranding in 2018.*
+              
+              While transitioning from Sixth Form to University, I formed part of the first line of customer support, dealing directly with user queries.
+              
+              Responsibilities included:
+              - Using newly-implemented LANDESK Management Suite to build new desktops, rebuild machines and deploy applications.
+              - Took on the development of a LG SuperSign implementation. After doing research on the project and working with the business analysts, we managed to increase the size of the deployment from 3 screens to 12 in various areas of the business. 
+            # info:
+            #   content:
+            # featuredItems:
+            #   fontAwesomeIcons:
+            #     - icon: fa-solid fa-globe
+            #       url: "https://www.safran-group.com/companies/safran-seats"
+            #       tooltip: Visit Website
+            #     - icon: fa-brands fa-linkedin-in
+            #       url: https://www.linkedin.com/in/luketainton
+            #       tooltip: See this on LinkedIn
+            #   customIcons: []
+
+
+  # Education
+  education:
+    enable: true
+    # title: "Custom Name"
+    index: false
+    items:
+      - title: "Bachelor of Science (with Honours) in Computer Networks"
+        school:
+          name: "Birmingham City University"
+          url: "https://bcu.ac.uk/computing"
+        date: "2016 - 2020"
+        content: |-
+          **Award: First w/ Honours**
+
+          Covered topics such as network design and administration, Python programming, and consultancy.
+
+          Extracurricular Activities
+            - Chief Technology Officer for HaCS (Hackathon and Computing Society) (Oct 2017 - Jun 2018)
+            - Attended The Things Conference 2018 in Amsterdam
+            - Travelled to Wuhan, China (2018) as part of a micro-exchange program with BCU and [Wuhan University of Science and Technology](https://en.wust.edu.cn)
+        featuredLink:
+          enable: true
+          name: "View My Profile"
+          url: "https://www.bcu.ac.uk/student-info/i-am-bcu/luke-tainton"
+      - title: "Sixth Form"
+        school:
+          name: "St. Teilo's Church in Wales High School"
+          url: "https://stteilos.com"
+        date: "2014 - 2016"
+        featuredLink:
+          enable: false
+          # url: "https://example.com"
+      - title: "High School"
+        school:
+          name: "St. Teilo's Church in Wales High School"
+          url: "https://stteilos.com"
+        date: "2009 - 2014"
+        featuredLink:
+          enable: false
+          # url: "https://example.com"
+
+  # Achievements
+  achievements:
+    enable: true
+    title: "Certifications & Achievements"
+    items:
+      - title: Cisco Certified Network Professional Enterprise
+        content: Validates the skills required to implement, troubleshoot, and maintain complex enterprise networks. Specialised in Enterprise Automation and Programmability.
+        url: /documents/certifications/CCNPEnt.pdf
+        # image: /images/achievement.jpg
+      - title: Cisco Certified DevNet Specialist - Enterprise Automation and Programmability
+        content: Focused on developing and maintaining applications built on Cisco platforms, with an emphasis on automation and programmability in enterprise networks.
+        url: /documents/certifications/ENAUTO.pdf
+      - title: Cisco Certified DevNet Associate
+        content: Fundamental knowledge of developing and maintaining applications built on Cisco platforms.
+        url: /documents/certifications/devnet-associate.pdf
+      - title: ITIL® 4 Foundation
+        content: Provides a comprehensive framework for managing IT services, focusing on aligning IT services with business needs and improving service delivery.
+        url: /documents/certifications/itil4-foundation.pdf
+      - title: "ITIL® 4 Specialist: Monitor, Support and Fulfil"
+        content: Focuses on the practical application of ITIL principles in monitoring, supporting, and fulfilling IT services to ensure they meet business requirements.
+        url: /documents/certifications/itil4-msf.pdf
+
+  # projects
+  projects:
+    enable: false
+    # title: "Custom Name"
+    items:
+      - title: Image Converter
+        content: A web app to convert image to pdf, png to jpg, png to jpg and png to webp without database using django.
+        image: /images/projects/converter.jpg
+        featured:
+          name: Demo
+          link: https://django-converter.herokuapp.com
+        badges:
+          - "Django"
+          - "Bootstrap"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/gurusabarish/converter
+
+  #Contact
+  contact:
+    enable: true
+    # title: "Custom Name"
+    content: Whether you have a question or just want to say hi, I'll try my best to get back to you!
+    btnName: Mail me
+    btnLink: mailto:luke@tainton.uk
+    # formspree:
+    #   enable: true # `contact.email` value will be ignored
+    #   formId: abcdefgh # Take it from your form's endpoint, like 'https://formspree.io/f/abcdefgh'
+    #   emailCaption: "Enter your email address"
+    #   messageCaption: "Enter your message here"
+    #   messageRows: 5
+
+  footer:
+    recentPosts:
+      path: "blogs"
+      count: 3
+      title: Recent Posts
+      enable: true
+      disableFeaturedImage: true
+    # socialNetworks:
+    #   github: https://github.com
+    #   linkedin: https://linkedin.com
+    #   twitter: https://twitter.com
+    #   instagram: https://instagram.com
+    #   facebook: https://facebook.com
+
+  # List pages like blogs and posts
+  listPages:
+    disableFeaturedImage: true
+
+  # Single pages like blog and post
+  singlePages:
+    socialShare: false
+    readTime:
+      enable: true
+      content: "min read"
+    scrollprogress:
+      enable: true
+    tags:
+      openInNewTab: true
+
+  # For translations
+  terms:
+    read: "Read"
+    toc: "Table Of Contents"
+    copyright: "All rights reserved"
+    pageNotFound: "Page not found"
+    emailText: "Check out this site"
+
+  datesFormat:
+    article: "2 Jan 2006"
+    articleList: "2 Jan 2006"
+    articleRecent: "2 Jan 2006"
+
+  #customScripts: -| # You can add custom scripts which will be added before </body> tag
+  #  <script type="text/javascript"><!-- any script here --></script>
